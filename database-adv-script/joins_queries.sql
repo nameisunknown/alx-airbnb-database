@@ -12,3 +12,14 @@ u.last_name
 
 FROM booking AS b
 INNER JOIN Users u ON b.booking_id = u.user_id;
+
+SELECT 
+p.property_id,
+p.title,
+r.review_id,
+r.rating,
+r.comment,
+r.created_at
+
+FROM Property p
+LEFT JOIN Review r ON p.property_id = r.review_id;
